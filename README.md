@@ -8,10 +8,10 @@ It uses protocol packets and binaries as input, extracts program behavior featur
 ICSFieldID
 ├── analysis.py # Entry point for symbolic execution
 ├── ast_parser.py # AST Parsing Module
-├── ast_parser.py # AST Parsing Module
 ├── bacnet_tracer.py # Submodule for tracing BACnet protocol execution
+├── features.csv # Features used in the experiments, divided into three categories
 ├── mms_tracer.py # Submodule for tracing MMS protocol execution
-├── ast_parser.py # PDML Parsing Module
+├── pdml_parser.py # PDML Parsing Module
 ├── README.md # Project description
 ├── s7_tracer.py # Submodule for tracing S7COMM protocol execution
 ├── siblib.py # Common lib for SimProcedure
@@ -20,8 +20,20 @@ ICSFieldID
 ├── bacserv # Protocol binaries, raw PCAP packets, and PDML-formatted packets for BACnet
 ├── data # Collected datasets used in experiments
 ├── mms # Protocol binaries, raw PCAP packets, and PDML-formatted packets for MMS
-└── s7 # Protocol binaries, raw PCAP packets, and PDML-formatted packets for S7COMM.
+└── s7 # Protocol binaries, raw PCAP packets, and PDML-formatted packets for S7COMM
 ```
+
+## Experimental Programs and Features
+
+In our experiments, we used the following client and server programs for each ICS protocol:
+
+| Protocol | Client        | Server         |
+|:--------|:-------------|:---------------|
+| BACnet  | [YABE](https://github.com/dechamps/yabe)       | [BACnet Stack](https://github.com/bacnet-stack/bacnet-stack) |
+| MMS     | [IEDExplorer](https://github.com/rogerz/IEDExplorer) | [libiec61850](https://github.com/mz-automation/libiec61850) |
+| S7COMM  | [Snap7](http://snap7.sourceforge.net/)         | [Snap7](http://snap7.sourceforge.net/) |
+
+In the experiments, the features were divided into three categories. For detailed information, please refer to the `features.csv` file.
 
 ## Usage
 

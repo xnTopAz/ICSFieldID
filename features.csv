@@ -1,0 +1,30 @@
+Category,Feature Name,Description
+Logical Operation Features,has_and,Whether participates in bitwise AND operation
+Logical Operation Features,has_or,Whether participates in bitwise OR operation
+Logical Operation Features,has_add,Whether participates in addition operation
+Logical Operation Features,has_sub,Whether participates in subtraction operation
+Logical Operation Features,has_xor,Whether participates in bitwise XOR operation
+Logical Operation Features,has_not,Whether participates in bitwise NOT operation
+Logical Operation Features,has_shl,Whether participates in left shift operation
+Logical Operation Features,has_shr,Whether participates in right shift operation
+Logical Operation Features,has_mul,Whether participates in multiplication operation
+Memory Behavior Features,has_ext,Whether zero/sign extension operations are involved
+Memory Behavior Features,has_extract,Whether the value is bit-sliced or extracted
+Memory Behavior Features,has_reverse,Whether bit order or byte order reversal occurs
+Memory Behavior Features,is_write_dst,Whether the value affects memory write destination address
+Memory Behavior Features,is_write_src,Whether the value is written to memory
+Memory Behavior Features,is_write_len,Whether the value affects the length of memory writes
+Memory Behavior Features,is_read_addr,Whether the value affects memory read address
+Memory Behavior Features,is_read_val,Whether the value is read more than once (indicating distinguishability)
+Memory Behavior Features,is_read_len,Whether the value affects length of memory reads
+Memory Behavior Features,addr_data,Whether memory behavior relates to data segment
+Memory Behavior Features,addr_stack,Whether memory behavior relates to stack memory
+Control Flow Features,compute_addr,Whether the value participates in computing addresses/offsets
+Control Flow Features,in_cond,Whether the value appears in conditional constraint expressions
+Control Flow Features,in_loop,Whether the value is processed inside loops
+Control Flow Features,loop_ctrl,Whether the value participates in loop control logic
+Control Flow Features,has_ne,Whether conditional constraints contain not-equal checks
+Control Flow Features,has_eq,Whether conditional constraints contain equality checks
+Control Flow Features,has_lt,Whether conditional constraints contain less-than checks
+Control Flow Features,has_gt,Whether conditional constraints contain greater-than checks
+Control Flow Features,data_in_cond,Whether conditional constraints involve operands from data segment
