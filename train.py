@@ -20,7 +20,7 @@ feature_names = []
 
 def init_feature_names():
     global feature_names
-    with open("tags.json") as f:
+    with open("./data/tags.json") as f:
         feature_names = json.load(f)
 
 def load_dataset(feature_path):

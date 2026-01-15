@@ -16,9 +16,8 @@ MEM_WRITE_LEN = 0x4
 MEM_READ_ADDR = 0x8
 MEM_READ_VAL = 0x10
 MEM_READ_LEN = 0x20
-ADDR_CODE = 0x40
-ADDR_DATA = 0x80
-ADDR_STACK = 0x100
+ADDR_DATA = 0x40
+ADDR_STACK = 0x80
 
 
 class SymTracer(object):
@@ -153,7 +152,8 @@ class SymTracer(object):
                 flag |= ADDR_DATA
             if sec == 'code':
                 # ipdb.set_trace()
-                flag |= ADDR_CODE
+                # flag |= ADDR_CODE
+                pass
         return flag
 
     def depends_on_target(self, expr):
